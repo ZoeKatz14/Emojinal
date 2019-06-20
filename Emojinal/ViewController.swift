@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBAction func showMessage(sender: UIButton) {
         let selectedEmotion = sender.titleLabel?.text
         let emojiMessage = customMessages[emojis[selectedEmotion!]!]
-        let alertController = UIAlertController(title: selectedEmotion, message: "", preferredStyle: UIAlertController.Style.alert)
+        let alertController = UIAlertController(title: selectedEmotion, message: emojiMessage, preferredStyle: UIAlertController.Style.alert)
                 alertController.addAction(UIAlertAction(title: "On my way!", style: UIAlertAction.Style.default, handler: nil))
         present(alertController, animated: true, completion: nil)
     }
